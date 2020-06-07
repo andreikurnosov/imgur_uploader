@@ -1,15 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 import AuthHandler from '../components/AuthHandler.vue'
+import ImageList from '../components/ImageList.vue'
+import UploadForm from '../components/UploadForm.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    component: ImageList
+  },
+  {
+    path: '/upload',
+    component: UploadForm
   },
   {
     path: '/oauth2/callback',
