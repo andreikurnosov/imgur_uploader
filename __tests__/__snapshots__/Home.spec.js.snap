@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders the component 1`] = `
+<div class="app-container">
+  <appheader-stub></appheader-stub>
+  <div class="ui container">
+    <router-view-stub name="default"></router-view-stub>
+  </div>
+</div>
+`;
