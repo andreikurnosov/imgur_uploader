@@ -1,11 +1,9 @@
 <template>
   <div>
-    <img
-      v-for="(image, idx) in allImages"
-      :key="idx"
-      :src="image.link"
-      style="width: 50%; margin-left: 50px;"
-    />
+    <div v-if="isLoggedIn" class="image-container">
+      <img v-for="(image, idx) in allImages" :key="idx" :src="image.link" />
+    </div>
+    <h2 v-else>Log in to get started</h2>
   </div>
 </template>
 
@@ -20,9 +18,19 @@ export default {
     this.fetchImages()
   },
   computed: {
-    ...mapGetters(['allImages'])
+    ...mapGetters(['allImages', 'isLoggedIn'])
   }
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.image-container {
+  column-count: 3;
+  column-gap: 0;
+}
+
+img {
+  max-width: 100%;
+  padding: 5px;
+}
+</style>
