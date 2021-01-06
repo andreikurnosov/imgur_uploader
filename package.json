@@ -11,7 +11,7 @@
   "dependencies": {
     "@vue/cli-plugin-unit-jest": "^4.4.1",
     "@vue/test-utils": "^1.0.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "jest": "^26.0.1",
     "lodash": "^4.17.19",
